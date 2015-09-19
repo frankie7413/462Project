@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Student Feedback - Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="/static/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Student Feedback</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="professorStart.html">Professor Login</a> 
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Student Feedback</h1>
+                <hr>
+                <p>What is Student Feedback? Student Feedback is a service that helps shield students from 
+                ever going out of their comfort zones to talk to proffesors. This way you can keep your introvertness save from ever having to eventually talk to proffesor even if you do have a good point or feedback to give.</p>
+                <a href="#student" class="btn btn-primary btn-xl page-scroll">Student Here</a>
+                <a href="#prof" class="btn btn-primary btn-xl page-scroll" >Professor Here</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="bg-primary" id="student">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="section-heading text-center">Why give Feedback?</h2>
+                    <hr class="light">
+
+                    <p class="text-center">Want to tell professor how much you enjoyed the lecture? Want to provide advice on how to improve the class? Want to ask to go over material in more detail? Want to ask for more resourses on material? Want to ask questions based on career goals? We can foward questions, concerns, and feedback to your professor Studentymously. Furthermore, if you want to receive a reply only to oneself, we provide the option to get the reply from professor and keep one Studentymous. Otherwise, the professor can elect to reply to whole class if they find your message helpful to the current class.</p>
+
+                    <hr class="light">
+                    <h2 class="text-center">Feedback Form</h2>
+                    <div id="submitForm"> 
+                    <div class="btn-group">
+                        <p id="collegeOption">College</p>
+                        <select id="colleges" class="btn btn-default">
+                            <option value="college">Select College</option>
+                            <option value="CSUF">CSUF</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group">
+                        <p id="majorOption">Major</p>
+                        <select id="major" class="btn btn-default">
+                            <option value="major">Select Major</option>
+                            <option value="CompSci">Computer Science</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group">
+                        <p id="courseOption">Courses</p>
+                        <select id="course" class="btn btn-default">
+                            <option value="course">Select Class</option>
+                            <option value="Test">Test Course</option>
+
+                        </select>
+                    </div>
+
+                    <p class="text-left" id="subjectTitle">Subject: </p>
+                    <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+
+                    <p class="text-left" id="emailTitle">Email(optional): </p>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email(Optional)">
+
+                    <p class="text-left" id="messageTitle">Message: </p>
+                    <textarea class="form-control" name="message" id="message" placeholder="Enter Message here" rows="8"></textarea>
+
+                    <p id="fillSection"></p>
+                    <input type="button" name="button" value="submit" id="button" class="btn btn-default btn-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark" id="prof">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Professors, we got the feedback you want!</h2>
+                    <hr class="light">
+                    <p class="text-faded">We offer professors an oppurtunity to recieve Studentymous feedback from students and the opportunity to archive messages for later being. In addition, professors can direcly reply to a student or to their entire current class based on feedback they receive. *must sign up with .edu mail to verify account.</p>
+                    <a href="professorStart.html" class="btn btn-default btn-xl">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Got any questions on our service? We will answer any question or concern you may have!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>1-800-GitGUD</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">feedbackUS@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="/static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/js/jquery.easing.min.js"></script>
+    <script src="/static/js/jquery.fittext.js"></script>
+    <script src="/static/js/wow.min.js"></script>
+    <script src="/static/javascript/appStudent.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/js/creative.js"></script>
+
+</body>
+
+</html>
