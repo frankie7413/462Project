@@ -8,6 +8,8 @@ download and install easiest method contains both node and npm.
 
 Had to use the follwing two lines to install the generator on OSX. 
 510  sudo chown -R $USER /usr/local
+
+
 511  npm install -g express-generator
 
 Express Generator:
