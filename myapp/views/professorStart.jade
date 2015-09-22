@@ -6,7 +6,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Student Feedback - Home
+    title Student Feedback - Professor
     // Bootstrap Core CSS
     link(rel='stylesheet', href='stylesheets/css/bootstrap.min.css', type='text/css')
     // Custom Fonts
@@ -17,6 +17,12 @@ html(lang='en')
     link(rel='stylesheet', href='stylesheets/css/animate.min.css', type='text/css')
     // Custom CSS
     link(rel='stylesheet', href='stylesheets/css/creative.css', type='text/css')
+    link(rel='stylesheet', href='stylesheets/css/style.css', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
   body#page-top
     nav#mainNav.navbar.navbar-default.navbar-fixed-top
       .container-fluid
@@ -32,62 +38,56 @@ html(lang='en')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
             li
-              a.page-scroll(href='/Login') Professor Login
+              a.page-scroll(href='index.html') Home
         // /.navbar-collapse
       // /.container-fluid
     header
       .header-content
         .header-content-inner
-          h1 Student Feedback
+          h1 Professor Form
           hr
-          p
-            | What is Student Feedback? Student Feedback is a service that helps shield students from
-            | ever going out of their comfort zones to talk to proffesors. This way you can keep your introvertness save from ever having to eventually talk to proffesor even if you do have a good point or feedback to give.
-          a.btn.btn-primary.btn-xl.page-scroll(href='#student') Student Here
-          a.btn.btn-primary.btn-xl.page-scroll(href='#prof') Professor Here
-    section#student.bg-primary
+          p Become part of what every professor on campus is talking about.
+          a.btn.btn-primary.btn-xl.page-scroll(href='#LogIn') Log In
+          a.btn.btn-primary.btn-xl.page-scroll(href='#SignUp') Sign Up
+    section#LogIn.bg-dark
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            h2.section-heading.text-left Log In
+            hr.light
+            p.text-faded
+            p#logEmailText Email: 
+            input#logEmail.form-size(type='text', name='email', placeholder='.edu email required')
+            p#logPasswordText Password:
+            input#logPassword.form-size(type='password', name='password', placeholder='case sensitive')
+            br
+            br
+            input#logButton.btn.btn-default.btn-xl(type='button', name='button', value='submit')
+            p#logFill
+    section#SignUp.bg-primary
       .container
         .row
           .col-lg-8.col-lg-offset-2
-            h2.section-heading.text-center Why give Feedback?
+            h2.section-heading Sign Up!
             hr.light
-            p.text-center
-              | Want to tell professor how much you enjoyed the lecture? Want to provide advice on how to improve the class? Want to ask to go over material in more detail? Want to ask for more resourses on material? Want to ask questions based on career goals? We can foward questions, concerns, and feedback to your professor Studentymously. Furthermore, if you want to receive a reply only to oneself, we provide the option to get the reply from professor and keep one Studentymous. Otherwise, the professor can elect to reply to whole class if they find your message helpful to the current class.
-            hr.light
-            h2.text-center Feedback Form
             #submitForm
               .btn-group
                 p#collegeOption College
                 select#colleges.btn.btn-default
-                  option(value='college') Select College
+                  option(value='college') Select Campus
                   option(value='CSUF') CSUF
-              .btn-group
-                p#majorOption Major
-                select#major.btn.btn-default
-                  option(value='major') Select Major
-                  option(value='CompSci') Computer Science
-              .btn-group
-                p#courseOption Courses
-                select#course.btn.btn-default
-                  option(value='course') Select Class
-                  option(value='Test') Test Course
-              p#subjectTitle.text-left Subject: 
-              input#subject.form-control(type='text', name='subject', placeholder='Subject')
-              p#emailTitle.text-left Email(optional): 
-              input#email.form-control(type='text', name='email', placeholder='Email(Optional)')
-              p#messageTitle.text-left Message: 
-              textarea#message.form-control(name='message', placeholder='Enter Message here', rows='8')
+              p#fnameText First Name: 
+              input#fname.form-control(type='text', placeholder='First Name')
+              p#lnameText Last Name: 
+              input#lname.form-control(type='text', placeholder='Last Name')
+              p#emailText Email: 
+              input#email.form-control(type='text', placeholder='Email must be .edu')
+              p#passwordText Password: 
+              input#password.form-control(type='password', name='Password', placeholder='Must be 8 characters, contain 1 digit & 1 letter')
+              p#repasswordText Retype-Password: 
+              input#passwordType.form-control(type='password', name='Password', placeholder='Must be 8 characters, contain 1 digit & 1 letter')
               p#fillSection
-              input#button.btn.btn-default.btn-xl(type='button', name='button', value='submit')
-    section#prof.bg-dark
-      .container
-        .row
-          .col-lg-8.col-lg-offset-2.text-center
-            h2.section-heading Professors, we got the feedback you want!
-            hr.light
-            p.text-faded
-              | We offer professors an oppurtunity to recieve Studentymous feedback from students and the opportunity to archive messages for later being. In addition, professors can direcly reply to a student or to their entire current class based on feedback they receive. *must sign up with .edu mail to verify account.
-            a.btn.btn-default.btn-xl(href='\Login') Get Started!
+              input#signButton.btn.btn-default.btn-xl(type='button', name='button', value='submit')
     section#contact
       .container
         .row
@@ -111,6 +111,8 @@ html(lang='en')
     script(src='stylesheets/js/jquery.easing.min.js')
     script(src='stylesheets/js/jquery.fittext.js')
     script(src='stylesheets/js/wow.min.js')
-    script(src='javascripts/appStudent.js')
+    script(src='javascripts/appProf.js')
     // Custom Theme JavaScript
     script(src='stylesheets/js/creative.js')
+// http://silviomoreto.github.io/bootstrap-select/
+
