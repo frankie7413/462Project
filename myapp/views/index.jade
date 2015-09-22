@@ -1,5 +1,116 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Student Feedback - Home
+    // Bootstrap Core CSS
+    link(rel='stylesheet', href='stylesheets/css/bootstrap.min.css', type='text/css')
+    // Custom Fonts
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='stylesheets/font-awesome/css/font-awesome.min.css', type='text/css')
+    // Plugin CSS
+    link(rel='stylesheet', href='stylesheets/css/animate.min.css', type='text/css')
+    // Custom CSS
+    link(rel='stylesheet', href='stylesheets/css/creative.css', type='text/css')
+  body#page-top
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand.page-scroll(href='#page-top') Student Feedback
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.page-scroll(href='professorStart.html') Professor Login
+        // /.navbar-collapse
+      // /.container-fluid
+    header
+      .header-content
+        .header-content-inner
+          h1 Student Feedback
+          hr
+          p
+            | What is Student Feedback? Student Feedback is a service that helps shield students from
+            | ever going out of their comfort zones to talk to proffesors. This way you can keep your introvertness save from ever having to eventually talk to proffesor even if you do have a good point or feedback to give.
+          a.btn.btn-primary.btn-xl.page-scroll(href='#student') Student Here
+          a.btn.btn-primary.btn-xl.page-scroll(href='#prof') Professor Here
+    section#student.bg-primary
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            h2.section-heading.text-center Why give Feedback?
+            hr.light
+            p.text-center
+              | Want to tell professor how much you enjoyed the lecture? Want to provide advice on how to improve the class? Want to ask to go over material in more detail? Want to ask for more resourses on material? Want to ask questions based on career goals? We can foward questions, concerns, and feedback to your professor Studentymously. Furthermore, if you want to receive a reply only to oneself, we provide the option to get the reply from professor and keep one Studentymous. Otherwise, the professor can elect to reply to whole class if they find your message helpful to the current class.
+            hr.light
+            h2.text-center Feedback Form
+            #submitForm
+              .btn-group
+                p#collegeOption College
+                select#colleges.btn.btn-default
+                  option(value='college') Select College
+                  option(value='CSUF') CSUF
+              .btn-group
+                p#majorOption Major
+                select#major.btn.btn-default
+                  option(value='major') Select Major
+                  option(value='CompSci') Computer Science
+              .btn-group
+                p#courseOption Courses
+                select#course.btn.btn-default
+                  option(value='course') Select Class
+                  option(value='Test') Test Course
+              p#subjectTitle.text-left Subject: 
+              input#subject.form-control(type='text', name='subject', placeholder='Subject')
+              p#emailTitle.text-left Email(optional): 
+              input#email.form-control(type='text', name='email', placeholder='Email(Optional)')
+              p#messageTitle.text-left Message: 
+              textarea#message.form-control(name='message', placeholder='Enter Message here', rows='8')
+              p#fillSection
+              input#button.btn.btn-default.btn-xl(type='button', name='button', value='submit')
+    section#prof.bg-dark
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            h2.section-heading Professors, we got the feedback you want!
+            hr.light
+            p.text-faded
+              | We offer professors an oppurtunity to recieve Studentymous feedback from students and the opportunity to archive messages for later being. In addition, professors can direcly reply to a student or to their entire current class based on feedback they receive. *must sign up with .edu mail to verify account.
+            a.btn.btn-default.btn-xl(href='professorStart.html') Get Started!
+    section#contact
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            h2.section-heading Let's Get In Touch!
+            hr.primary
+            p
+              | Got any questions on our service? We will answer any question or concern you may have!
+          .col-lg-4.col-lg-offset-2.text-center
+            i.fa.fa-phone.fa-3x.wow.bounceIn
+            p 1-800-GitGUD
+          .col-lg-4.text-center
+            i.fa.fa-envelope-o.fa-3x.wow.bounceIn(data-wow-delay='.1s')
+            p
+              a(href='mailto:your-email@your-domain.com') feedbackUS@gmail.com
+    // jQuery
+    script(src='stylesheets/js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='stylesheets/js/bootstrap.min.js')
+    // Plugin JavaScript
+    script(src='stylesheets/js/jquery.easing.min.js')
+    script(src='stylesheets/js/jquery.fittext.js')
+    script(src='stylesheets/js/wow.min.js')
+    script(src='javascripts/appStudent.js')
+    // Custom Theme JavaScript
+    script(src='stylesheets/js/creative.js')
