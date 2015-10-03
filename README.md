@@ -1,3 +1,5 @@
+UPDATE: I moved this repo to private repo for the duration of developing it and should be up on frankie7413.me for testing in the near future. 
+
 # 462Project
 This repo will contain our 462 project which uses the 462FrontEnd repo files 
 to utilize the django framework. 
