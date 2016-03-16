@@ -1,4 +1,4 @@
-UPDATE #2: Site is up on http://studentfeedback.us/ email me for an account to view all its features. 
+### UPDATE #2: Site is up on http://studentfeedback.us/ email me for an account to view all its features. 
 
 UPDATE: I moved this repo to private repo for the duration of developing it and should be up on frankie7413.me for testing in the near future. 
 
